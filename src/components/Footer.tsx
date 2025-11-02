@@ -1,5 +1,5 @@
 import { FaInstagram } from "react-icons/fa";
-import { Navbar } from "./Navbar";
+import { NavbarFooter } from "./NavbarFooter";
 import { GrGithub } from "react-icons/gr";
 
 export function Footer() {
@@ -7,7 +7,7 @@ export function Footer() {
     <footer className="w-full border border-t-gray-200">
       <div className="flex flex-col">
         <div className="bg-white p-4 w-full text-center ">
-          <Navbar
+          <NavbarFooter
             firstColumn={[
               { name: "Sobre nós", link_to: "#" },
               { name: "Career", link_to: "#" },

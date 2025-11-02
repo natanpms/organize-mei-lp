@@ -3,19 +3,49 @@ import { Footer } from "./components/Footer";
 import { Tabs } from "./components/Tabs";
 import { IPhoneX } from "react-device-frames";
 import organizeMei from "./assets/organize-mei.jpg";
+import { Navbar } from "./components/Navbar";
 
 function App() {
   return (
     <div className="flex flex-col w-full min-h-screen">
+      <div className="py-6">
+        <Navbar
+          navItems={[
+            { name: "Home", link_to: "#" },
+            { name: "Sobre", link_to: "#" },
+            { name: "Utilidade", link_to: "#" },
+            { name: "Contatos", link_to: "#" },
+          ]}/>
+      </div>
+      {/* seção tabs */}
       <section className="container mx-auto py-6 md:py-12 w-full">
         <div className="flex flex-col justify-center items-center px-6 gap-6">
-          <h2 className="text-2xl font-bold text-[#252b42]">Por que usar OrganizeMEI?</h2>
+          <h2 className="text-2xl tracking-wide font-bold text-[#252b42]">
+            Por que usar OrganizeMEI?
+          </h2>
           <div className="w-full">
             <Tabs
               items={[
-                { title: "Exemplo 1", content: "Conteúdo do Exemplo 1" },
-                { title: "Exemplo 2", content: "Conteúdo do Exemplo 2" },
-                { title: "Exemplo 3", content: "Conteúdo do Exemplo 3" },
+                {
+                  title: "Gestão financeira simplificada",
+                  content:
+                    "Registre receitas e despesas, categorize suas movimentações e acompanhe o saldo do seu negócio em tempo real, tudo de forma intuitiva e sem complicação.",
+                },
+                {
+                  title: "Cobranças automáticas e PIX integrado",
+                  content:
+                    "Envie cobranças diretamente aos seus clientes com código PIX, acompanhe pagamentos e reduza a inadimplência de forma prática e rápida.",
+                },
+                {
+                  title: "Controle completo do seu perfil",
+                  content:
+                    "Gerencie facilmente suas informações e dados do seu negócio com um sistema seguro e personalizado para microempreendedores.",
+                },
+                 {
+                  title: "Feito sob medida para MEIs",
+                  content:
+                    "Desenvolvido especialmente para microempreendedores, o OrganizeMEI oferece apenas o que você precisa, nada de funções complexas ou confusas.",
+                },
               ]}
             />
           </div>
