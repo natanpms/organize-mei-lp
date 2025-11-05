@@ -15,8 +15,51 @@ function App() {
             { name: "Sobre", link_to: "#" },
             { name: "Utilidade", link_to: "#" },
             { name: "Contatos", link_to: "#" },
-          ]}/>
+          ]}
+        />
       </div>
+
+      <section className="flex flex-col lg:flex-row items-center justify-around w-full container mx-auto py-6 md:py-14 flex-1">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 px-6 md:px-4">
+          {[
+            {
+              id: 1,
+              titulo: "Cadastro e gerenciamento de usuários",
+              descricao:
+                "Permite que MEIs se cadastrem com informações do negócio, façam login seguro e gerenciem seu perfil.",
+            },
+            {
+              id: 2,
+              titulo: "Controle financeiro",
+              descricao:
+                "Registro de receitas e despesas, categorização, cálculo de saldo e geração.",
+            },
+            {
+              id: 3,
+              titulo: "Controle de cobranças",
+              descricao:
+                "Acompanhamento do status de cobrança (pago, pendente, vencido).Envia cobrança com código PIX para o cliente realizar o pagamento.",
+            },
+          ].map((val) => (
+            <div
+              key={val.id}
+              className="bg-transparent rounded-lg shadow-lg p-6 flex flex-col items-center w-full"
+            >
+              <div className="w-16 h-16 mb-4">
+                <img
+                  src={`https://via.placeholder.com/64?text=Icon+${val.id}`}
+                  alt={`Ícone ${val.id}`}
+                  className="w-full h-full object-contain"
+                />
+              </div>
+              <div className="flex flex-col justify-center items-center space-y-2">
+                <h3 className="text-lg font-semibold mb-2">{val.titulo}</h3>
+                <p className="text-gray-600 text-center">{val.descricao}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
       {/* seção tabs */}
       <section className="container mx-auto py-6 md:py-12 w-full">
         <div className="flex flex-col justify-center items-center px-6 gap-6">
@@ -41,7 +84,7 @@ function App() {
                   content:
                     "Gerencie facilmente suas informações e dados do seu negócio com um sistema seguro e personalizado para microempreendedores.",
                 },
-                 {
+                {
                   title: "Feito sob medida para MEIs",
                   content:
                     "Desenvolvido especialmente para microempreendedores, o OrganizeMEI oferece apenas o que você precisa, nada de funções complexas ou confusas.",
