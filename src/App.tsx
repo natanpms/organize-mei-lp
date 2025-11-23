@@ -4,23 +4,15 @@ import { Tabs } from "./components/Tabs";
 import { IPhoneX } from "react-device-frames";
 import organizeMei from "./assets/organize-mei.jpg";
 import { Navbar } from "./components/Navbar";
-import UpBlue from "./assets/up-blue.svg";
-import imgLove from "./assets/love-img.svg";
-import userImg from "./assets/pic-user.svg";
+
 import Hero from "./components/Hero";
+import { cardContent, navItems, tabs } from "./constants/utils";
 
 function App() {
   return (
     <div className="flex flex-col w-full min-h-screen">
       <div className="py-6 bg-[#3DA700]">
-        <Navbar
-          navItems={[
-            { name: "Home", link_to: "#home" },
-            { name: "Sobre", link_to: "#sobre" },
-            { name: "Utilidade", link_to: "#utilidade" },
-            { name: "Contatos", link_to: "#contatos" },
-          ]}
-        />
+        <Navbar navItems={navItems} />
       </div>
       <Hero />
 
@@ -29,29 +21,7 @@ function App() {
         className="flex flex-col lg:flex-row items-center justify-around w-full container mx-auto py-6 md:py-14 flex-1"
       >
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 px-6 md:px-4">
-          {[
-            {
-              id: 1,
-              titulo: "Cadastro e gerenciamento de usuários",
-              descricao:
-                "Permite que MEIs se cadastrem com informações do negócio, façam login seguro e gerenciem seu perfil.",
-              imgPath: UpBlue,
-            },
-            {
-              id: 2,
-              titulo: "Controle financeiro",
-              descricao:
-                "Registro de receitas e despesas, categorização, cálculo de saldo e geração.",
-              imgPath: imgLove,
-            },
-            {
-              id: 3,
-              titulo: "Controle de cobranças",
-              descricao:
-                "Acompanhamento do status de cobrança (pago, pendente, vencido).Envia cobrança com código PIX para o cliente realizar o pagamento.",
-              imgPath: userImg,
-            },
-          ].map((val) => (
+          {cardContent.map((val) => (
             <div
               key={val.id}
               className="bg-transparent rounded-lg shadow-lg p-6 flex flex-col items-center w-full"
@@ -85,30 +55,7 @@ function App() {
             Por que usar OrganizeMEI?
           </h2>
           <div className="w-full">
-            <Tabs
-              items={[
-                {
-                  title: "Gestão financeira simplificada",
-                  content:
-                    "Registre receitas e despesas, categorize suas movimentações e acompanhe o saldo do seu negócio em tempo real, tudo de forma intuitiva e sem complicação.",
-                },
-                {
-                  title: "Cobranças automáticas e PIX integrado",
-                  content:
-                    "Envie cobranças diretamente aos seus clientes com código PIX, acompanhe pagamentos e reduza a inadimplência de forma prática e rápida.",
-                },
-                {
-                  title: "Controle completo do seu perfil",
-                  content:
-                    "Gerencie facilmente suas informações e dados do seu negócio com um sistema seguro e personalizado para microempreendedores.",
-                },
-                {
-                  title: "Feito sob medida para MEIs",
-                  content:
-                    "Desenvolvido especialmente para microempreendedores, o OrganizeMEI oferece apenas o que você precisa, nada de funções complexas ou confusas.",
-                },
-              ]}
-            />
+            <Tabs items={tabs} />
           </div>
         </div>
       </section>
