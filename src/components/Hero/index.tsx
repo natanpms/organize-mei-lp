@@ -4,7 +4,7 @@ export default function Hero() {
   return (
     <section id="home" className="bg-[#3DA700]">
       <div className="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16">
-        <h1 className="mb-4 text-4xl text-left md:text-center font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
+        <h1 className="mb-4 text-4xl text-left md:text-center font-extrabold tracking-tight leading-none md:text-5xl lg:text-6xl text-white">
           Simplifique a gestão financeira e de cobranças do seu
           microempreendimento
         </h1>
