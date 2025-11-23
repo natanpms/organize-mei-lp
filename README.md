@@ -1,73 +1,55 @@
-# React + TypeScript + Vite
+# OrganizeMEI - Landing Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Bem-vindo à landing page do **OrganizeMEI**, o sistema projetado para simplificar a vida do Microempreendedor Individual. Esta página de apresentação foi construída para ser moderna, responsiva e informativa.
 
-Currently, two official plugins are available:
+## 🚀 Sobre o Projeto
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+O OrganizeMEI é uma solução completa para gestão de negócios para MEIs. A plataforma visa resolver as principais dores do microempreendedor, oferecendo ferramentas para controle financeiro, gestão de cobranças e muito mais. Esta landing page serve como o principal ponto de contato e apresentação do produto.
 
-## React Compiler
+## ✨ Funcionalidades do Sistema
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+O sistema OrganizeMEI oferece um conjunto de ferramentas poderosas:
 
-## Expanding the ESLint configuration
+- **Gestão Financeira Simplificada:** Registre receitas e despesas, categorize movimentações e acompanhe o saldo em tempo real.
+- **Cobranças Automáticas e PIX Integrado:** Envie cobranças profissionais com código PIX e reduza a inadimplência.
+- **Controle Completo do Perfil:** Gerencie suas informações de negócio de forma segura e personalizada.
+- **Feito Sob Medida para MEIs:** Uma plataforma focada nas reais necessidades do microempreendedor, sem complexidade.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 💻 Tecnologias Utilizadas
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Esta landing page foi desenvolvida com as seguintes tecnologias:
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- [React](https://react.dev/)
+- [Vite](https://vitejs.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## ▶️ Como Executar o Projeto
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Siga os passos abaixo para executar o projeto em seu ambiente local:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+1. **Clone o repositório**
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+   ```sh
+   git clone https://github.com/natanpms/organize-mei-lp
+   ```
+
+2. **Instale as dependências**
+   Navegue até a pasta do projeto e execute:
+
+   ```sh
+   npm install
+   ```
+
+3. **Inicie o servidor de desenvolvimento**
+
+   ```sh
+   npm run dev
+   ```
+
+4. **Abra no navegador**
+   Abra [http://localhost:5173](http://localhost:5173) (ou a porta indicada no seu terminal) para visualizar o projeto.
+
+---
+
+Feito com ❤️ para simplificar a jornada do MEI.
