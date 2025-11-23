@@ -29,7 +29,7 @@ export function Tabs({ items }: TabsProps) {
               className="flex justify-between items-center"
               onClick={() => toggleTab(index)}
             >
-              <h2 className="text-[#3DA700] text-lg font-bold tracking-widest">
+              <h2 className="text-[#3DA700] text-base md:text-lg font-bold tracking-widest">
                 {item.title}
               </h2>
               <IoIosArrowDown

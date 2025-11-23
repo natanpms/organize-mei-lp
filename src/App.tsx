@@ -7,6 +7,7 @@ import { Navbar } from "./components/Navbar";
 
 import Hero from "./components/Hero";
 import { cardContent, navItems, tabs } from "./constants/utils";
+import SectionContent from "./components/SectionContent";
 
 function App() {
   return (
@@ -16,9 +17,9 @@ function App() {
       </div>
       <Hero />
 
-      <section
-        id="sobre"
-        className="flex flex-col lg:flex-row items-center justify-around w-full container mx-auto py-6 md:py-14 flex-1"
+      <SectionContent
+        className="flex flex-col lg:flex-row items-center justify-around "
+        sectionId="sobre"
       >
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 px-6 md:px-4">
           {cardContent.map((val) => (
@@ -44,12 +45,10 @@ function App() {
             </div>
           ))}
         </div>
-      </section>
+      </SectionContent>
+
       {/* seção tabs */}
-      <section
-        id="utilidade"
-        className="container mx-auto py-6 md:py-12 w-full"
-      >
+      <SectionContent sectionId="utilidade">
         <div className="flex flex-col justify-center items-center px-6 gap-6">
           <h2 className="text-2xl tracking-wide font-bold text-[#252b42]">
             Por que usar OrganizeMEI?
@@ -58,10 +57,14 @@ function App() {
             <Tabs items={tabs} />
           </div>
         </div>
-      </section>
+      </SectionContent>
 
       {/* seção iphone */}
-      <section className="flex flex-col lg:flex-row items-center justify-around w-full container mx-auto py-6 md:py-12 flex-1">
+
+      <SectionContent
+        sectionId="conta"
+        className="flex flex-col lg:flex-row items-center justify-around"
+      >
         <div className="text-center md:text-left space-y-4 max-w-xl">
           <h1 className="text-3xl lg:text-5xl font-bold text-[#252b42]">
             Pronto para iniciar?
@@ -81,8 +84,7 @@ function App() {
         <div className="block w-36 md:w-60 mt-6 lg:mt-0">
           <IPhoneX screenshot={organizeMei} />
         </div>
-      </section>
-
+      </SectionContent>
       <Footer />
     </div>
   );

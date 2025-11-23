@@ -1,6 +1,6 @@
-import UpBlue from "./assets/up-blue.svg";
-import imgLove from "./assets/love-img.svg";
-import userImg from "./assets/pic-user.svg";
+import UpBlue from "../assets/up-blue.svg";
+import imgLove from "../assets/love-img.svg";
+import userImg from "../assets/pic-user.svg";
 
 export const navItems = [
   { name: "Home", link_to: "#home" },
