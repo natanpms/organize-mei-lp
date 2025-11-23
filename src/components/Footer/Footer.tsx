@@ -1,6 +1,6 @@
 import { NavbarFooter } from "../NavbarFooter/NavbarFooter";
 import { GrGithub } from "react-icons/gr";
-import { BsLinkedin } from "react-icons/bs";
+import { BsInstagram, BsLinkedin } from "react-icons/bs";
 import { firstColumnFooter, secondColumn } from "../../constants/utils";
 
 export function Footer() {
@@ -29,6 +29,15 @@ export function Footer() {
                   />
                 ),
                 link_to: "https://www.linkedin.com/in/r%C3%BAbia-cacemiro/",
+              },
+              {
+                icon: (
+                  <BsInstagram
+                    className="hover:text-pink-600 transition-colors"
+                    size={30}
+                  />
+                ),
+                link_to: "https://www.instagram.com/organizemei_pgi/",
               },
             ]}
           />

@@ -8,6 +8,8 @@ import { Navbar } from "./components/Navbar/Navbar";
 import Hero from "./components/Hero";
 import { cardContent, navItems, tabs } from "./constants/utils";
 import SectionContent from "./components/SectionContent";
+import organizeFinanceiro from "./assets/organize-financeiro.png";
+import organizeCobranca from "./assets/cobrancas.png";
 
 function App() {
   return (
@@ -16,6 +18,29 @@ function App() {
         <Navbar navItems={navItems} />
       </div>
       <Hero />
+
+      {/* financeiro */}
+      <SectionContent className="py-12" sectionId="sobre">
+        <div className="grid grid-cols-1 md:grid-cols-2">
+          <div className="text-left space-y-4 max-w-xl">
+            <h1 className="text-3xl lg:text-5xl font-bold text-[#252b42]">
+              Gerencie suas Finanças
+            </h1>
+            <p className="text-lg font-medium text-gray-500 px-2">
+              Com o OrganizeMEI, você tem uma visão clara e completa das suas
+              finanças. Controle suas despesas, receitas e veja o crescimento do
+              seu negócio de forma simples e intuitiva.
+            </p>
+          </div>
+          <div className="w-full mt-6 lg:mt-0">
+            <img
+              src={organizeFinanceiro}
+              alt="Organize Financeiro"
+              className="w-full h-full object-cover"
+            />
+          </div>
+        </div>
+      </SectionContent>
 
       <SectionContent
         className="flex flex-col lg:flex-row items-center justify-around "
@@ -58,6 +83,31 @@ function App() {
           </div>
         </div>
       </SectionContent>
+
+      {/* cobrança */}
+      <div className="w-full bg-[#3DA700] py-12">
+        <SectionContent sectionId="cobranca">
+          <div className="grid grid-cols-1 md:grid-cols-2">
+            <div className="text-left space-y-4 max-w-xl">
+              <h1 className="text-3xl lg:text-5xl font-bold text-white">
+                Organize as cobranças de forma simples
+              </h1>
+              <p className="text-lg font-medium text-gray-200 px-2">
+                Com o OrganizeMEI, você tem uma visão simples para entender suas
+                cobranças. Assim conseguindo controlar e entender os status de
+                cada cobrança respectiva.
+              </p>
+            </div>
+            <div className="w-full mt-6 lg:mt-0">
+              <img
+                src={organizeCobranca}
+                alt="Organize Cobrança"
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+        </SectionContent>
+      </div>
 
       {/* seção iphone */}
 
