@@ -1,9 +1,9 @@
 import { Button } from "@headlessui/react";
-import { Footer } from "./components/Footer";
-import { Tabs } from "./components/Tabs";
+import { Footer } from "./components/Footer/Footer";
+import { Tabs } from "./components/Tabs/Tabs";
 import { IPhoneX } from "react-device-frames";
 import organizeMei from "./assets/organize-mei.jpg";
-import { Navbar } from "./components/Navbar";
+import { Navbar } from "./components/Navbar/Navbar";
 
 import Hero from "./components/Hero";
 import { cardContent, navItems, tabs } from "./constants/utils";

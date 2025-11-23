@@ -1,6 +1,7 @@
-import { NavbarFooter } from "./NavbarFooter";
+import { NavbarFooter } from "../NavbarFooter/NavbarFooter";
 import { GrGithub } from "react-icons/gr";
 import { BsLinkedin } from "react-icons/bs";
+import { firstColumnFooter, secondColumn } from "../../constants/utils";
 
 export function Footer() {
   return (
@@ -8,18 +9,8 @@ export function Footer() {
       <div className="flex flex-col">
         <div className="bg-white p-4 w-full text-center ">
           <NavbarFooter
-            firstColumn={[
-              { name: "Sobre nós", link_to: "#home" },
-              { name: "Career", link_to: "#" },
-              { name: "We are hiring", link_to: "#" },
-              { name: "Blog", link_to: "#" },
-            ]}
-            secondColumn={[
-              { name: "Business Marketing", link_to: "#" },
-              { name: "User Analytic", link_to: "#" },
-              { name: "Live Chat", link_to: "#" },
-              { name: "Unlimited Support", link_to: "#" },
-            ]}
+            firstColumn={firstColumnFooter}
+            secondColumn={secondColumn}
             icons={[
               {
                 icon: (

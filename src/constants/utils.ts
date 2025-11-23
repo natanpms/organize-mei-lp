@@ -55,3 +55,17 @@ export const tabs = [
       "Desenvolvido especialmente para microempreendedores, o OrganizeMEI oferece apenas o que você precisa, nada de funções complexas ou confusas.",
   },
 ];
+
+export const firstColumnFooter = [
+  { name: "Sobre nós", link_to: "#home" },
+  { name: "Career", link_to: "#" },
+  { name: "We are hiring", link_to: "#" },
+  { name: "Blog", link_to: "#" },
+];
+
+export const secondColumn = [
+  { name: "Business Marketing", link_to: "#" },
+  { name: "User Analytic", link_to: "#" },
+  { name: "Live Chat", link_to: "#" },
+  { name: "Unlimited Support", link_to: "#" },
+];
