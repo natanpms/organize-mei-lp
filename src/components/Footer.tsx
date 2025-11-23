@@ -1,15 +1,15 @@
-import { FaInstagram } from "react-icons/fa";
 import { NavbarFooter } from "./NavbarFooter";
 import { GrGithub } from "react-icons/gr";
+import { BsLinkedin } from "react-icons/bs";
 
 export function Footer() {
   return (
-    <footer className="w-full border border-t-gray-200">
+    <footer id="contatos" className="w-full border border-t-gray-200">
       <div className="flex flex-col">
         <div className="bg-white p-4 w-full text-center ">
           <NavbarFooter
             firstColumn={[
-              { name: "Sobre nós", link_to: "#" },
+              { name: "Sobre nós", link_to: "#home" },
               { name: "Career", link_to: "#" },
               { name: "We are hiring", link_to: "#" },
               { name: "Blog", link_to: "#" },
@@ -21,8 +21,24 @@ export function Footer() {
               { name: "Unlimited Support", link_to: "#" },
             ]}
             icons={[
-              { icon: <GrGithub className="hover:text-gray-500 transition-colors" size={30} />, link_to: "#" },
-              { icon: <FaInstagram className="hover:text-pink-500 transition-colors" size={30} />, link_to: "#" },
+              {
+                icon: (
+                  <GrGithub
+                    className="hover:text-gray-500 transition-colors"
+                    size={30}
+                  />
+                ),
+                link_to: "https://github.com/RobertaCacemiro",
+              },
+              {
+                icon: (
+                  <BsLinkedin
+                    className="hover:text-blue-500 transition-colors"
+                    size={30}
+                  />
+                ),
+                link_to: "https://www.linkedin.com/in/r%C3%BAbia-cacemiro/",
+              },
             ]}
           />
         </div>

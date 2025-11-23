@@ -26,7 +26,9 @@ export function Navbar({ navItems }: NavbarProps) {
       <nav
         className={`${
           isOpenSideBar ? "hidden" : "fixed"
-        } left-1/2 -translate-x-1/2 bg-white z-20 transition-all duration-500 ease-in-out
+        } left-1/2 -translate-x-1/2 ${
+          isScrolled ? "bg-white" : "bg-[#3DA700]"
+        }  z-20 transition-all duration-500 ease-in-out
         ${
           isScrolled
             ? "shadow-xl rounded-full top-4 scale-95 opacity-95"
@@ -35,7 +37,11 @@ export function Navbar({ navItems }: NavbarProps) {
         style={{ maxWidth: "1100px", width: "90%" }}
       >
         <div className="flex justify-between items-center px-4 py-3">
-          <h1 className="text-xl lg:text-3xl font-bold text-[#3DA700]">
+          <h1
+            className={`text-xl lg:text-3xl font-bold ${
+              isScrolled ? "text-[#3DA700]" : "text-white"
+            } `}
+          >
             OrganizeMEI
           </h1>
 
@@ -44,7 +50,9 @@ export function Navbar({ navItems }: NavbarProps) {
               <li key={index}>
                 <a
                   href={item.link_to}
-                  className="text-base tracking-wide text-gray-700 hover:text-[#3DA700] transition-colors"
+                  className={`text-base tracking-wide  ${
+                    isScrolled ? "text-[#3DA700]" : "text-white"
+                  }  hover:underline underline-offset-8  transition-colors`}
                 >
                   {item.name}
                 </a>
@@ -65,7 +73,9 @@ export function Navbar({ navItems }: NavbarProps) {
 
           <div className="block lg:hidden">
             <button
-              className="hover:cursor-pointer hover:bg-gray-100  hover:rounded-full"
+              className={`hover:cursor-pointer ${
+                isScrolled ? "text-gray-900" : "text-white"
+              }  hover:bg-gray-100  hover:rounded-full`}
               onClick={() => setIsOpenSideBar(!isOpenSideBar)}
             >
               <RiMenu3Fill size={25} />

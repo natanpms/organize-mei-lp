@@ -4,22 +4,30 @@ import { Tabs } from "./components/Tabs";
 import { IPhoneX } from "react-device-frames";
 import organizeMei from "./assets/organize-mei.jpg";
 import { Navbar } from "./components/Navbar";
+import UpBlue from "./assets/up-blue.svg";
+import imgLove from "./assets/love-img.svg";
+import userImg from "./assets/pic-user.svg";
+import Hero from "./components/Hero";
 
 function App() {
   return (
     <div className="flex flex-col w-full min-h-screen">
-      <div className="py-6">
+      <div className="py-6 bg-[#3DA700]">
         <Navbar
           navItems={[
-            { name: "Home", link_to: "#" },
-            { name: "Sobre", link_to: "#" },
-            { name: "Utilidade", link_to: "#" },
-            { name: "Contatos", link_to: "#" },
+            { name: "Home", link_to: "#home" },
+            { name: "Sobre", link_to: "#sobre" },
+            { name: "Utilidade", link_to: "#utilidade" },
+            { name: "Contatos", link_to: "#contatos" },
           ]}
         />
       </div>
+      <Hero />
 
-      <section className="flex flex-col lg:flex-row items-center justify-around w-full container mx-auto py-6 md:py-14 flex-1">
+      <section
+        id="sobre"
+        className="flex flex-col lg:flex-row items-center justify-around w-full container mx-auto py-6 md:py-14 flex-1"
+      >
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 px-6 md:px-4">
           {[
             {
@@ -27,18 +35,21 @@ function App() {
               titulo: "Cadastro e gerenciamento de usuários",
               descricao:
                 "Permite que MEIs se cadastrem com informações do negócio, façam login seguro e gerenciem seu perfil.",
+              imgPath: UpBlue,
             },
             {
               id: 2,
               titulo: "Controle financeiro",
               descricao:
                 "Registro de receitas e despesas, categorização, cálculo de saldo e geração.",
+              imgPath: imgLove,
             },
             {
               id: 3,
               titulo: "Controle de cobranças",
               descricao:
                 "Acompanhamento do status de cobrança (pago, pendente, vencido).Envia cobrança com código PIX para o cliente realizar o pagamento.",
+              imgPath: userImg,
             },
           ].map((val) => (
             <div
@@ -47,21 +58,28 @@ function App() {
             >
               <div className="w-16 h-16 mb-4">
                 <img
-                  src={`https://via.placeholder.com/64?text=Icon+${val.id}`}
+                  src={val?.imgPath}
                   alt={`Ícone ${val.id}`}
                   className="w-full h-full object-contain"
                 />
               </div>
               <div className="flex flex-col justify-center items-center space-y-2">
-                <h3 className="text-lg font-semibold mb-2">{val.titulo}</h3>
-                <p className="text-gray-600 text-center">{val.descricao}</p>
+                <h3 className="text-lg text-center font-semibold mb-2">
+                  {val.titulo}
+                </h3>
+                <p className="text-gray-600 text-left md:text-center">
+                  {val.descricao}
+                </p>
               </div>
             </div>
           ))}
         </div>
       </section>
       {/* seção tabs */}
-      <section className="container mx-auto py-6 md:py-12 w-full">
+      <section
+        id="utilidade"
+        className="container mx-auto py-6 md:py-12 w-full"
+      >
         <div className="flex flex-col justify-center items-center px-6 gap-6">
           <h2 className="text-2xl tracking-wide font-bold text-[#252b42]">
             Por que usar OrganizeMEI?
